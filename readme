@@ -1,0 +1,30 @@
+Endpoint and request data
+To Update Task
+http://127.0.0.1:8000/update-task/17/
+{
+    "status":2,
+    "description":"carry",
+    "id" : 2
+}
+Only Assignee will be able to update the task
+where is the id of user wanted to make request
+to get task assigned
+http://127.0.0.1:8000/task-assigned/
+{
+    "id" : 2
+}
+To get created task
+http://127.0.0.1:8000/get-task-created/
+{
+    "id":1
+}
+To Create Task
+http://127.0.0.1:8000/create-task/
+ {
+    "name": "Task Name",
+    "description": "Task Description",
+    "status": 0,
+    "created_by": 1,
+    "assignee":[2,5]
+}
+only manager will be able to create task
